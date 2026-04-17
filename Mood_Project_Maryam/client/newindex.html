@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>project</title>
+    <link rel="stylesheet" type="text/css" href="new.css">
+    <script scr="validation.js"></script>
+    <script src="logingin.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            <!-- left side -->
+            <h1 class="heading-style-1"> Already a Mood Buddi-e </h1>
+            <p id="login-error"></p>
+            <form id="login-form" name="loginForm" action="#" method="post">
+                <label for="username">Email</label><br>
+                <input id="login-email" class="post-reg" type="text" name="loginEmail" /><br>
+                <label for="username">Password</label><br>
+                <input id="login-password" class="post-reg" type="password" name="loginPassword" /><br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div>
+            <!-- right side -->
+            <h1 class="heading-style-2"> Create Account</h1>
+            <p id="signup-error"></p><p id="signup-success"></p>
+            <form id="signup-form" name="signup" action="#" method="post">
+
+                <label class="sign-up-label" for="first-name">First Name</label><br>
+                <input class="pre-reg" id="signup-firstname" name="first-name" type="text" /><br>
+
+                <label class="sign-up-label" for="last-name">Last Name</label><br>
+                <input class="pre-reg" id="signup-lastname" name="last-name" type="text" /><br>
+
+                <label class="sign-up-label" for="pronouns">Pronouns</label><br>
+                <input class="pre-reg" id="signup-pronouns" name="pronouns" type="text" /><br>
+
+                <label class="sign-up-label" for="username">Email</label><br>
+                <input class="pre-reg" id="signup-email" name="email" type="text" /><br>
+
+                <label class="sign-up-label" for="username">Username</label><br>
+                <input class="pre-reg" id="signup-username" name="username" type="text" /><br>
+
+                <label class="sign-up-label" for="password">Password</label><br>
+                <input class="pre-reg" id="signup-password" name="password" type="password" /><br>
+
+                <label class="sign-up-label" for="student-status">Student Status</label><br>
+                <select class="pre-reg" id="signup-studentstatus" name="student-status">
+                    <option value="" selected disabled>Select status...</option>
+                    <option value="true">Present</option>
+                    <option value="false">Alumni</option>
+                </select><br>
+
+                 <label class="sign-up-label" for="age">Age</label><br>
+                <input class="pre-reg" id="signup-age" name="age" type="number" /><br>
+
+                
+
+                <input type="checkbox" id="signup-checkbox" name="checkbox"> I agree to all privacy policy<br>
+                <button type="submit" id="signupForm">Sign up</button>
+            </form>
+            <a href="faq.html" class ="faq-link">Visit FAQ</a>
+
+        </div>
+    </div>
+
+    <!-- <script src="validation.js"></script>  DEAD FILE REMOVE -->
+    <script src="loginsign.js"></script>
+    <!-- <script src="index.js"></script> DEAD FILE REMOVE -->
+</body>
+
+</html>

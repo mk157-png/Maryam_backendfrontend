@@ -1,0 +1,147 @@
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Rubik, sans-serif;
+        }
+
+         :root {
+            --blue: #aee1f6;
+            --btn-blue: #a8dffa;
+            --input-fields: #cbebfa;
+            --pre-reg: #f1f9fc;
+            --submit-button: #a8dffa;
+            --faq-list-item: #cbebfa;
+            --link-bg: #0086c9;
+            --link-bg-hover: #006da1;
+        }
+       
+        .wrapper {
+           width:100%;
+           height: calc(100vh - 100px);
+           min-height:100%;
+           display:flex;
+        }
+
+        .wrapper .split{
+            padding:50px;
+        }
+        .right{
+          width:50%;
+          height:100%;
+          background:url(char2.png) no-repeat;
+          background-position: center bottom;
+          background-size:50%;
+
+
+        }
+        .left{
+          background:var(--blue);
+          width:50%;
+          height:100%;
+       
+        }
+
+        .left h1{
+            color:white;
+        }
+
+        h1 {
+            font-size:4em
+        }
+        /* identifiers */
+        #contents{
+            padding:20px;
+            margin-top:-20px;
+        }
+
+         #contents li{
+            margin-top: 20px;
+            font-size:1.2em;
+            font-weight:500;
+            line-height: 1em;
+         }
+
+         #faq{
+            list-style: none;
+            width:100%;
+         }
+
+         #faq li{
+            display:block;
+            width:100%;
+            max-width:50%;
+            background:var(--faq-list-item);
+            border-radius:20px; 
+            padding:20px 30px;
+            margin:15px 0px;
+            position:relative;
+            overflow:hidden;
+        }
+         #faq p{
+            color: black;
+            font-size:1.2em
+         }
+
+
+         #faq li:hover{
+            animation: unfold 1s forwards;
+            align-items:flex-start
+         }
+
+        #faq li:hover .arrow {
+            transform: rotate(90deg);
+        }
+
+         #faq div:first-child{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+         }
+
+          #faq div:last-child{
+            margin-top:30px;
+            position:absolute;
+            width:calc(100% - 50px);
+         }
+
+        @keyframes unfold {
+           0%{
+           height: 40px;
+            }
+           100%{
+            height:140px;
+           }
+        }
+
+
+        #faq li:hover svg {
+            transform: rotate(90deg);
+        }
+        .faq-link,
+        .back-link {
+           display: inline-block;
+           margin-top: 20px;
+           padding: 12px 20px;
+           background: #0086c9;
+           color: white;
+           font-weight: bold;
+           border-radius: 8px;
+           text-decoration: none;
+           transition:.3s ease;
+       }
+
+        .faq-link:hover,
+        .back-link:hover {
+          background: #006da1;
+    }
+        
+   

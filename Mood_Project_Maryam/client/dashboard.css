@@ -1,0 +1,29 @@
+:root {
+  --color-faq-background: #BFE7F8;
+  --color-content-background: white;
+  --color-card-background: #DBF3FF;
+  --color-speech-bubble: #CDEDFF;
+  --font-primary: "Poppins", sans-serif;
+}
+
+.dashboard-container{
+    background:var(--color-content-background);
+    padding:40px;
+    border-radius:20px;
+    width:400px;
+    margin:100px auto;
+    text-align:center;
+    box-shadow : 0 8px 20px rgba(0,0,0,0);
+}
+.dashboard-buttons button {
+  display: block;
+  margin: 10px 0 ;
+  width:100%;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: #0086c9;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}

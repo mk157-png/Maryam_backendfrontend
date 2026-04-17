@@ -1,0 +1,113 @@
+  :root {
+            --blue: #aee1f6;
+            --btn-blue: #a8dffa;
+            --input-fields: #cbebfa;
+            --pre-reg: #f1f9fc;
+            --submit-button: #a8dffa;
+        }
+
+        .wrapper {
+            width: 100vw;
+            height: 100vh;
+            padding: 0px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wrapper div {
+            width: 50vw;
+            height: 100vh;
+
+        }
+
+        .wrapper div:first-child {
+            background: var(--blue);
+            padding: 50px;
+            width: calc(50vw - 100px);
+            background: url(./char.png) no-repeat var(--blue);
+            background-size: 50%;
+            background-position: 100% 75%;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+
+        .wrapper div:last-child {
+            background: white;
+            padding: 50px;
+            width: calc(50vw - 50px);
+
+        }
+
+        input.post-reg {
+            padding: 10px;
+            border: 0px;
+            border-radius: 5px;
+            margin-top: 5px;
+            background: var(--input-fields);
+            width: 100%;
+            margin-bottom: 15px;
+            outline: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        input.pre-reg {
+            padding: 10px;
+            border: 0px;
+            border-radius: 5px;
+            margin-top: 5px;
+            background: var(--pre-reg);
+            width: 100%;
+            margin-bottom: 15px;
+            outline: none;
+            color:black;
+            font-weight: bold;
+        }
+
+        label {
+            color: white;
+            font-weight: bold;
+            font-family: sans-serif
+        }
+
+        h1.heading-style-1 {
+            font-size: 2em;
+            color: white;
+            font-family: Helvetica, sans-serif;
+            font-weight: bold;
+            padding: 30px 0px;
+        }
+
+        h1.heading-style-2 {
+            font-size: 2em;
+            color: black;
+            font-family: Helvetica, sans-serif;
+            font-weight: bold;
+            padding: 30px 0px;
+        }
+
+        .sign-up-label {
+            color: black;
+        }
+
+        button {
+            background: var(--submit-button);
+            width: 100%;
+            padding: 30px 0px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            height: 40px;
+            padding: 0px;
+            margin-top: 30px;
+            color: white;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #0086c9;
+            cursor: pointer;
+        }

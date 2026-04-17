@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="dashboard.css" >
+    </head>
+    <body>
+        <div class="dashboard-container">
+            <h1>Login was sucessful</h1>
+            <h2 id="welcome-user"></h2>
+            <p>Welcome back to the dashboard what would you like to do?</p>
+            <div class="dashboard-buttons">
+                <button onclick="goToWeekly()">Weekly mood review</button>
+                <button onclick="goToResetPassword()">Reset Password</button>
+                <button onclick="goToFAQ()">FAQ</button>
+                <button onclick="logout()">Logout</button>
+            </div>
+
+        </div>
+     <script>
+        async function loadUser(){
+            const token = localStorage.getItem("jwt");
+            try{
+                const response = await fetch("http://localhost:8080/api/user/me", {
+                    headers : {
+                        "Authorization": token
+                    }
+                });
+                 if (response.ok){
+                const user= await response.json();
+                document.getElementById("welcome-user").textContent=
+                "Welcome, " + user.firstName ;
+
+            }
+            
+            } catch(err){
+                console.error("User load failed", err);
+            }
+        }
+     
+        document.addEventListener("DOMContentLoaded", ()=> {
+            const token = localStorage.getItem("jwt");
+            if(!token){
+                alert("Please log in first");
+                window.location.href="newindex.html";
+                return;
+            }
+            loadUser();
+        } );
+        function goToWeekly(){
+            window.location.href="weeklyreview.html";
+        }
+        function goToResetPassword(){
+            window.location.href="resetpassword.html";
+        }
+        function goToFAQ(){
+            window.location.href="faq.html";
+        }
+        function logout(){
+            localStorage.removeItem("jwt");
+            window.location.href="newindex.html";
+        }
+     </script>
+    </body>
+
+</html>

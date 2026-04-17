@@ -1,0 +1,91 @@
+/* General styles and variable definitions */
+:root {
+  --color-faq-background: #BFE7F8;
+  --color-content-background: white;
+  --color-card-background: #DBF3FF;
+  --color-speech-bubble: #CDEDFF;
+  --font-primary: "Poppins", sans-serif;
+}
+
+/* Wrapper for the main layout */
+.wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Left column/panel */
+/* Consider adding a specific class like .faq-panel-left for better maintainability */
+.wrapper div:first-child {
+  width: calc(50vw - 100px);
+  padding: 50px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  /* Typography */
+  color: white;
+  font-family: var(--font-primary);
+  font-size: 32px;
+  font-weight: bold;
+
+  /* Background */
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0.3)),
+    url("./background.png") no-repeat center / cover,
+    var(--color-faq-background);
+  /* Note: background-position was declared twice. I've consolidated it. */
+}
+
+/* Right column/panel */
+/* Consider adding a specific class like .faq-panel-right for better maintainability */
+.wrapper div:last-child {
+  width: calc(50vw - 50px);
+  padding: 50px;
+
+  /* Typography */
+  color: black;
+  font-family: var(--font-primary);
+  font-size: 40px;
+  font-weight: bold;
+
+  /* Background */
+  /* Note: background-size and background-position had 3 values for 2 images. Corrected to 2. */
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0.15)),
+    url("./background.png") no-repeat 88% 22% / 280px,
+    var(--color-content-background);
+}
+
+.faq-box {
+  width: 42px;
+  margin-bottom: 15px;
+}
+
+.dropbtn div {
+  background: var(--color-card-background);
+  color: black;
+  font-family: var(--font-primary);
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+}
+
+/* Common styles for links */
+.faq-link,
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: #0086c9;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.faq-link:hover,
+.back-link:hover {
+  background: #006da1;
+}
